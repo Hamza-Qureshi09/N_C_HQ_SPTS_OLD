@@ -1,0 +1,207 @@
+.ProfilePage {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ededed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .prfileCard {
+        background-color: #ffffff;
+        height: 330px;
+        width: 530px;
+        max-width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+
+        .ProfileCardLeft {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            align-items: center;
+            padding: 20px 20px 10px 25px;
+            border-radius: 10px;
+
+            .forProfileImage {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 130px;
+                width: 100%;
+
+                p {
+                    font-family: "Nunito", sans-serif;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+
+                .ImageProfile {
+                    height: 70px;
+                    width: 70px;
+                    border: 2px solid skyblue;
+                    border-radius: 50%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                }
+
+                label {
+                    font-family: "Nunito", sans-serif;
+                    font-size: 15px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    color: #0077ff;
+                }
+            }
+
+            .forProfileUsername {
+                width: 100%;
+                height: 60px;
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                label {
+                    font-family: "Poppins", sans-serif;
+                    font-size: 15px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    color: #000000;
+                }
+                input{
+                    width: 100%;
+                    border: none;
+                    outline: 2px solid skyblue;
+                    height: 30px;
+                    padding-left: 10px;
+                    border-radius: 10px;
+                    font-size: 15px;
+                    font-family: "Montserrat", sans-serif;
+                    margin-top: 5px;
+                }
+            }
+            button{
+                border: none;
+                outline: none;
+                padding: 8px 20px;
+                border-radius: 20px;
+                font-size: 16px;
+                background-color: #0077ff;
+                cursor: pointer;
+                box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+                text-align: center;
+                font-family: "Nunito", sans-serif;
+                color: white;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: 16px;
+            }
+        }
+
+        .ProfileCardRightForPreview {
+            /* background-color: red; */
+            height: 100%;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+
+            .rightsidepreview {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h3{
+                    font-family: "Nunito", sans-serif;
+                    margin-bottom: 10px;
+                }
+
+                .ProfileImage{
+                    border-radius: 50%;
+                    height: 180px;
+                    width: 180px;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .goBackButton {
+        position: fixed;
+        left: 3%;
+        top: 4%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            outline: none;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #0077ff;
+            cursor: pointer;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            text-align: center;
+            font-family: "Nunito", sans-serif;
+            color: white;
+        }
+    }
+}
+
+// #forUserExtraField {
+//     height: 350px;
+// }
+
+
+@media (max-width: 544px) {
+    .ProfileCardRightForPreview {
+        width: 160px;
+    }
+
+    .rightsidepreview img {
+        height: 110px;
+        width: 110px;
+    }
+}
+
+@media (max-width: 465px) {
+    .ProfileCardRightForPreview {
+        display: none;
+    }
+
+    .ProfileCardLeft {
+        width: 100%;
+    }
+}

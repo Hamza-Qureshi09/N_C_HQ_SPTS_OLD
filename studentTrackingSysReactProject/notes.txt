@@ -1,0 +1,673 @@
+admin sidebar
+dashbord
+events
+student attendence
+management
+class management 
+subject management
+student management
+teacher management
+exam management
+holiday mangement
+
+fees
+fee management
+
+time table
+daily diary
+leave application
+appointments
+year planner
+feedback
+
+
+
+
+navbar 
+update profile
+noticeboard or notification management
+
+
+
+parent sidebar
+dashboard
+children/s report
+fee challans
+leave application
+appointments
+year planner
+submit feedback
+your feedbacks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className={style.TodaysEvents}>
+
+              <Carousel>
+                <Carousel.Item interval={1000}>
+                  <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="/images/courseone.jpg" />
+                    <Card.Body>
+                      <Card.Title>Card Title</Card.Title>
+                      <Card.Text>
+                        Some quick example text to build on the card title and make up the
+                        bulk of the card's content.
+                      </Card.Text>
+                      <Button variant="primary">Go somewhere</Button>
+                    </Card.Body>
+                  </Card>
+                </Carousel.Item>
+                <Carousel.Item interval={500}>
+                  <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="/images/courseone.jpg" />
+                    <Card.Body>
+                      <Card.Title>Card Title</Card.Title>
+                      <Card.Text>
+                        Some quick example text to build on the card title and make up the
+                        bulk of the card's content.
+                      </Card.Text>
+                      <Button variant="primary">Go somewhere</Button>
+                    </Card.Body>
+                  </Card>
+                </Carousel.Item>
+              </Carousel>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
+function BasicExample() {
+  return (
+    <Form>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
+  );
+}
+
+export default BasicExample;
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <Button variant="primary" onClick={() => setModalShow(true)}>
+        Launch vertically centered modal
+      </Button>
+
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import Table from 'react-bootstrap/Table';
+
+function BasicExample() {
+  return (
+    <Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td colSpan={2}>Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </Table>
+  );
+}
+
+export default BasicExample;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<Modal
+            {...props}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+        >
+            <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title-vcenter" className={style.AddClassFormTitle}>
+                    update Class <span>(For example 1,2,3-A,etc...)</span>
+                </Modal.Title>
+            </Modal.Header>
+            <Form className={style.AddClassForm} onSubmit={submitData}>
+                <Form.Group className="mb-3" controlId="formBasicText"  >
+                    <Form.Label>Update Class Name <sup>*</sup></Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="Enter class name"
+                        onChange={handleInput}
+                        value={inputVal.className}
+                        name="className" />
+                    {/* <Form.Text className="text-muted">
+                        We'll never share your email with anyone else.
+                    </Form.Text> */}
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicText" >
+                    <Form.Label>update Class Fees <sup>*</sup></Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="e.g:- 2000"
+                        onChange={handleInput}
+                        value={inputVal.Fee}
+                        name="Fee" />
+                </Form.Group>
+                <Button variant="primary" type="submit" >
+                    Submit
+                </Button>
+            </Form>
+            <Modal.Footer>
+                <Button onClick={props.onHide}>Close</Button>
+            </Modal.Footer>
+        </Modal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useState } from 'react'
+import style from './Holiday.module.scss'
+import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
+import format from 'date-fns/format';
+import parse from 'date-fns/parse'
+import startOfWeek from 'date-fns/startOfWeek';
+import getDay from 'date-fns/getDay';
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import moment from 'moment'
+
+const locales = {
+    "en-US": require("date-fns/locale/en-US")
+}
+const localizer = dateFnsLocalizer({
+    format,
+    parse,
+    startOfWeek,
+    getDay,
+    locales
+})
+
+const events = [
+    {
+        title: "14 August",
+        allDay: true,
+        startDate: moment(new Date(2022, 7, 14)).format("YYYY/MM/DD"),
+        endDate: moment(new Date(2022, 7, 16)).format("YYYY/MM/DD"),
+    },
+]
+// console.log(moment(new Date('2022-08-14T11:59:47+05:00')).format("HH:mm:ss"));
+const Holiday = () => {
+    const [NewEvent, setNewEvent] = useState(
+        {
+            title: "",
+            startDate: "",
+            endDate: "",
+        })
+    const [allEvents, setallEvents] = useState(events)
+    const functionHandleEvent = () => {
+        setallEvents([...allEvents, NewEvent])
+    }
+
+    const handleInput = (e) => {
+        const { name, value } = e.target;
+        setNewEvent((preVal) => {
+            return {
+                ...preVal,
+                [name]: value
+            }
+        })
+    }
+    return (
+        <div>
+            <h1>Add new event</h1>
+            <div className="addNewEvent">
+                <input type="text" placeholder='Add Title' value={NewEvent.title} onChange={(e) => setNewEvent((preval) => {
+                    return ({
+                        ...preval,
+                        title: e.target.value
+                    })
+                })} />
+                <input type="datetime-local" placeholder='start date' value={NewEvent.startDate} name="startDate" onChange={handleInput}
+                />
+                <input type="datetime-local" placeholder='start date' value={NewEvent.endDate} name="endDate" onChange={handleInput}
+                />
+
+                <button onClick={functionHandleEvent}>Add Event</button>
+            </div>
+            <Calendar localizer={localizer}
+                selectable
+                popup={true}
+                // onSelectSlot={(slotInfo) => { console.log("hamza")}} //each slot selected event
+                // onDoubleClickEvent={(slotInfo) => { console.log("hamza qureshi")}} // on event double click trigger
+                onSelectEvent={(event)=>console.log(event)} // on event click trigger
+                events={allEvents}
+                startAccessor="startDate"
+                endAccessor="endDate" style={{ height: "400px", margin: "5px" }} />
+        </div>
+    )
+}
+
+export default Holiday
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useState } from 'react'
+import style from './Sidebar.module.scss'
+import { useSelector, useDispatch } from 'react-redux'
+import { sideBarToggleFunc, RouteCheck } from '../../../store/controls/control'
+import CloseIcon from '@mui/icons-material/Close';
+import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
+import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
+import TouchAppIcon from '@mui/icons-material/TouchApp';
+// import UpcomingIcon from '@mui/icons-material/Upcoming';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined';
+import AssignmentTurnedInOutlinedIcon from '@mui/icons-material/AssignmentTurnedInOutlined';
+import AppRegistrationOutlinedIcon from '@mui/icons-material/AppRegistrationOutlined';
+import DriveFileRenameOutlineOutlinedIcon from '@mui/icons-material/DriveFileRenameOutlineOutlined';
+import LocalActivityIcon from '@mui/icons-material/LocalActivity';
+import AddTaskOutlinedIcon from '@mui/icons-material/AddTaskOutlined';
+import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
+import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
+import ArrowDropUpOutlinedIcon from '@mui/icons-material/ArrowDropUpOutlined';
+
+const Sidebar = ({ ToggleStatus }) => {
+  const dispatch = useDispatch();
+  const { status } = useSelector((state) => { return state.controls })
+  const [SidebarItemList, setSidebarItemList] = useState(false)
+
+
+  const ToggleSidebarFunc = (e) => {
+    dispatch(sideBarToggleFunc({ newStatus: !status }))
+  }
+
+  const setNewRoute = (Route) => {
+    localStorage.setItem("ActiveClass", Route)
+  }
+  const ActiveClass = localStorage.getItem("ActiveClass")
+
+  const ToggleSidebarListItems = () => {
+    setSidebarItemList(!SidebarItemList)
+  }
+  return (
+    <div className={ToggleStatus ? style.Sidebar : style.SidebarHide}>
+      {(window.innerWidth <= 900 && ToggleStatus === false) ?
+        <div className={style.SidebarNavbar}>
+          <div className={style.logo}>
+            <img src="/images/mongodb.png" alt="profile" />
+            <h3>
+              SPRS
+            </h3>
+          </div>
+          <div className={style.CloseBtn}>
+            <CloseIcon className={style.close} onClick={ToggleSidebarFunc} />
+          </div>
+        </div>
+        :
+        ""}
+
+      {/* creating sidebar lists */}
+      <div className={style.items}>
+        <div className={style.itemContainer}>
+          <div className={style.sidebarItem}>
+            <b>Dashboard</b>
+            <div className={style.list}>
+              <a href="/Dashboard" className={ActiveClass === "/Dashboard" ? style.active:""} onClick={() => setNewRoute("/Dashboard")}>
+                <DashboardOutlinedIcon className={style.iconDesign} />
+                <span>Dashboard</span>
+              </a>           </div> 
+            <div className={style.list}>
+              <a href="/Events" className={ActiveClass === "/Events" ? style.active:""} onClick={() => setNewRoute("/Events")}>
+                <EmojiEventsOutlinedIcon className={style.iconDesign} />
+                <span>Events</span>
+              </a>           </div>
+            <div className={style.list}>
+              <a href="/StudentA" className={ActiveClass === "/StudentA" ? style.active:""} onClick={() => setNewRoute("/StudentA")}>
+                <CalendarMonthIcon className={style.iconDesign} />
+                <span>Student Attendance</span>
+              </a>           </div>
+            <div className={style.list}>
+              <a href="/Appointments"  className={ActiveClass === "/Appointments" ? style.active:""} onClick={() => setNewRoute("/Appointments")}>
+                <TouchAppIcon className={style.iconDesign} />
+                <span>Appointments</span>
+              </a>           </div>
+          </div>
+
+
+          <div className={style.sidebarItem}>
+            <b>Management</b>
+            <div className={style.listtwo} onClick={ToggleSidebarListItems}>
+              <div className={style.showmore}>
+                <CalendarMonthIcon className={style.iconDesign} />
+                <span>Manage Work</span>
+              </div>
+              {SidebarItemList ? <ArrowDropDownOutlinedIcon /> : <ArrowDropUpOutlinedIcon />}
+
+            </div>
+            <div className={SidebarItemList ? style.dropDownListsShow : style.dropDownListsHide}>
+              <div className={style.list}>
+                <a href="/Classes"  className={ActiveClass === "/Classes" ? style.active:""} onClick={() => setNewRoute("/Classes")}>
+                  <AutoStoriesOutlinedIcon className={style.iconDesign} />
+                  <span>class management </span>
+                </a>             </div>
+              <div className={style.list}>
+                <a href="/Subjects"  className={ActiveClass === "/Subjects" ? style.active:""} onClick={() => setNewRoute("/Subjects")}>
+                  <AppRegistrationOutlinedIcon className={style.iconDesign} />
+                  <span>subject management</span>
+                </a>             </div>
+              <div className={style.list}>
+                <a href="/Students"  className={ActiveClass === "/Students" ? style.active:""} onClick={() => setNewRoute("/Students")}>
+                  <DriveFileRenameOutlineOutlinedIcon className={style.iconDesign} />
+                  <span>student management</span>
+                </a>             </div>
+              <div className={style.list}>
+                <a href="/Exams"  className={ActiveClass === "/Exams" ? style.active:""} onClick={() => setNewRoute(window.location.pathname)}>
+                  <AssignmentTurnedInOutlinedIcon className={style.iconDesign} />
+                  <span>exam management</span>
+                </a>             </div>
+              <div className={style.list}>
+                <a href="/Teacher"  className={ActiveClass === "/Teacher" ? style.active:""} onClick={() => setNewRoute(window.location.pathname)}>
+                  <DriveFileRenameOutlineOutlinedIcon className={style.iconDesign} />
+                  <span>teacher management</span>
+                </a>             </div>
+              <div className={style.list}>
+                <a href="/Holidays"  className={ActiveClass === "/Holidays" ? style.active:""} onClick={() => setNewRoute(window.location.pathname)}>
+                  <AddTaskOutlinedIcon className={style.iconDesign} />
+                  <span>holiday mangement</span>
+                </a>             </div>
+            </div>
+          </div>
+
+
+          <div className={style.sidebarItem}>
+            <b>Fee Manage</b>
+            <div className={style.list}>
+              <a href="/Fee"  className={ActiveClass === "/Fee" ? style.active:""} onClick={() => setNewRoute(window.location.pathname)}>
+                <MonetizationOnOutlinedIcon className={style.iconDesign} />
+                <span>Fee Management</span>
+              </a>           </div>
+          </div>
+
+
+          <div className={style.sidebarItem}>
+            <b>Others</b>
+            <div className={style.list}>
+              <a href="/Activity"  className={ActiveClass === "/Activity" ? style.active:""} onClick={() => setNewRoute(window.location.pathname)}>
+                <LocalActivityIcon className={style.iconDesign} />
+                <span>Daily Activity</span>
+              </a>           </div>
+            <div className={style.list}>
+              <a href="/TimeTable"  className={ActiveClass === "/TimeTable" ? style.active:""} onClick={() => setNewRoute(window.location.pathname)}>
+                <CalendarMonthIcon className={style.iconDesign} />
+                <span>time table</span>
+              </a>           </div>
+            <div className={style.list}>
+              <a href="/DailyDiary"  className={ActiveClass === "/DailyDiary" ? style.active:""} onClick={() => setNewRoute(window.location.pathname)}>
+                <AddTaskOutlinedIcon className={style.iconDesign} />
+                <span>daily diary</span>
+              </a>           </div>
+            <div className={style.list}>
+              <a href="/LeaveApplication"  className={ActiveClass === "/LeaveApplication" ? style.active:""} onClick={() => setNewRoute(window.location.pathname)}>
+                <AppRegistrationOutlinedIcon className={style.iconDesign} />
+                <span>leave application</span>
+              </a>           </div>
+            <div className={style.list}>
+              <a href="/YearPlanner"  className={ActiveClass === "/YearPlanner" ? style.active:""} onClick={() => setNewRoute(window.location.pathname)}>
+                <CalendarMonthIcon className={style.iconDesign} />
+                <span>year planner</span>
+              </a>           </div>
+            <div className={style.list}>
+              <a href="/Feadback"  className={ActiveClass === "/Feadback" ? style.active:""} onClick={() => setNewRoute(window.location.pathname)}>
+                <DriveFileRenameOutlineOutlinedIcon className={style.iconDesign} />
+                <span>feedback</span>
+              </a>           </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Sidebar
+
+
+https://stackoverflow.com/questions/20853142/trying-to-detect-browser-close-event
+
+window.onbeforeunload = function (e) {
+// Your logic to prepare for 'Stay on this Page' goes here 
+    console.log(e)
+
+    return "Please click 'Stay on this Page' and we will give you candy";
+};

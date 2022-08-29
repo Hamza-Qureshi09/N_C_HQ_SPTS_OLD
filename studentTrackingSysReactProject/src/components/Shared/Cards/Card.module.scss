@@ -1,0 +1,40 @@
+.card{
+    height: 310px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    box-shadow: 0px 0px 4px black;
+    border-radius: 3px;
+    background-color: white;
+}
+.card img{
+    height: 200px;
+    width: 100%;
+    border-radius: 3px;
+}
+.card h2{
+    font-size: 24px;
+    padding-left: 5px;
+}
+.card p{
+    font-size: 18px;
+    padding-left: 5px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 3px;
+}
+.buttons button{
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: skyblue;
+    color: white;
+    box-shadow: 0px 0px 4px rgba(33, 33, 33,.3);
+}

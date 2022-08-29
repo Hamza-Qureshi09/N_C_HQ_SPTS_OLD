@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@400;500;700&display=swap');
+
+
+
+
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+
+.active{
+  background-color: #bfbffd;
+  color: #716fff;
+  transition: all 0.2s ease-in-out;
+}
+.active span{
+  color: #716fff;
+}
+
+
+::-webkit-scrollbar {
+  width: 0px;
+  background-color: rgb(255, 255, 255);
+}
+::-webkit-scrollbar-thumb{
+    background-color: brown;
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: white;
+}
+.jodit-status-bar{
+  display: none;
+  visibility: hidden;
+}
+/* .rbc-event{
+  background-color: rgb(34 197 119);
+  background-color: rebeccapurple;
+  background-color: #ff3131;
+} */
