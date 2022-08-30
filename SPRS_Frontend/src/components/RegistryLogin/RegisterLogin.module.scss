@@ -1,0 +1,253 @@
+.RegisterLogin {
+    height: 100vh;
+    width: 100%;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .RegisterLoginCard {
+        height: 380px;
+        /* max-height: 500px; */
+        width: 500px;
+        max-width: 90%;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+
+        .Card {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            // background-color: aqua;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+
+            .inputField {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                width: 100%;
+                padding-left: 40px;
+
+                label {
+                    font-family: "Lato", sans-serif;
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                    letter-spacing: 1px;
+                }
+
+                input {
+                    height: 50px;
+                    width: 100%;
+                    max-width: 90%;
+                    border-radius: 5px;
+                    padding-left: 5px;
+                    font-size: 24px;
+                    font-family: "nunito", sans-serif;
+                    border: none;
+                    outline: 2px solid skyblue;
+                    background-color: rgb(243, 246, 248);
+
+                    &:focus {
+                        outline: 2px solid rgb(55, 182, 233);
+                        background-color: aliceblue;
+                    }
+
+                    &::placeholder {
+                        padding-left: 5px;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .inputField:nth-child(1) {
+                margin-top: 30px;
+            }
+
+            .inputField:nth-child(2) {
+                margin-top: -15px;
+            }
+
+            .inputField:nth-child(3) {
+                margin-top: -15px;
+            }
+
+            .buttonField {
+                width: 100%;
+                max-width: 80%;
+                padding: 0px 20px;
+                button {
+                    background-color: rgb(11, 158, 216);
+                    color: white;
+                    border: none;
+                    outline: none;
+                    padding: 10px ;
+                    font-size: 20px;
+                    font-family: "Josefin Sans", sans-serif;
+                    font-weight: bolder;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    transition: all 0.3s ease-in-out;
+                    margin-bottom: 20px;
+                    width: 100%;
+
+                    &:hover {
+                        background-color: rgb(77, 188, 232);
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+
+            .buttonFieldForLogin {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                margin-bottom: 30px;
+
+                p {
+                    font-family: "Josefin Sans", sans-serif;
+                    font-size: 18px;
+                }
+
+                a {
+                    color: rgb(11, 158, 216);
+                    border: none;
+                    outline: none;
+                    font-size: 18px;
+                    font-family: "Josefin Sans", sans-serif;
+                    font-weight: bolder;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    transition: all 0.3s ease-in-out;
+                    margin-left: 10px;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.buttonField button:hover {
+}
+
+.buttonFieldForLogin {
+}
+
+.buttonFieldForLogin p {
+}
+
+.buttonFieldForLogin a {
+}
+
+.CardActive {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.CardActive .inputField:nth-child(1) {
+    margin-top: 100px;
+}
+
+.CardActive .inputField:nth-child(2) {
+    margin-top: 20px;
+}
+
+.CardActive .buttonField button {
+    margin-top: 30px;
+}
+
+.CardActive .buttonFieldForLogin {
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+    .RegisterLoginCard {
+        height: 450px;
+        width: 400px;
+        max-width: 90%;
+    }
+
+    .inputField label {
+        font-size: 18px;
+    }
+
+    .inputField input {
+        height: 45px;
+        width: 320px;
+    }
+}
+
+@media (max-width: 440px) {
+    .RegisterLoginCard {
+        height: 430px;
+        width: 300px;
+        max-width: 90%;
+    }
+
+    .inputField label {
+        font-size: 17px;
+    }
+
+    .inputField input {
+        height: 40px;
+        width: 250px;
+    }
+
+    .buttonField button {
+        padding: 10px 25px;
+    }
+}
+
+@media (max-width: 350px) {
+    .RegisterLoginCard {
+        height: 430px;
+        width: 300px;
+        max-width: 90%;
+    }
+
+    .inputField label {
+        font-size: 17px;
+    }
+
+    .inputField input {
+        height: 40px;
+        width: 220px;
+    }
+
+    .buttonField button {
+        padding: 10px 25px;
+    }
+
+    .buttonFieldForLogin {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .buttonFieldForLogin p {
+        font-size: 15px;
+    }
+
+    .buttonFieldForLogin a {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,713 @@
+.TeacherDashboardWrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    height: 89.9vh;
+
+    .TeacherPageFull {
+        width: 100%;
+        background-color: #e8e8fc; 
+        transition: all 0.3s ease-in-out;
+        overflow: scroll;
+        overflow-x: hidden;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: var(--iconColor);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--iconColor);
+            width: 10px;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+    }
+
+    .TeacherPageSmall {
+        width: calc(100% - 250px);
+        background-color: #e8e8fc;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+        overflow: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--iconColor);
+            width: 10px;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+    }
+
+    .TeacherPageContainer {
+        display: flex;
+        flex-direction: column;
+
+        .TeacherPageTopPart {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            button {
+                font-size: 18px;
+
+                .btnPlusIcon {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+
+        .wrapMidPar {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .TeacherPageMidPart {
+            width: 100%;
+            max-width: 1050px;
+            height: 100%;
+            margin-top: 20px;
+
+            .searchField {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                .searchAlign {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    input {
+                        width: 230px;
+                        margin-right: 2px;
+                        font-family: "Open Sans", sans-serif;
+                    }
+
+                    .formButtons {
+                        button {
+                            font-family: "Open Sans", sans-serif;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+
+                .sortingsys {
+                    select {
+                        height: 40px;
+                        width: 200px;
+                    }
+                }
+            }
+
+            .table {
+                height: 100%;
+                margin-top: 20px;
+                overflow: scroll;
+
+                &::-webkit-scrollbar {
+                    width: 1px;
+                    height: 8px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: var(--iconColor);
+                    width: 10px;
+                    border-radius: 10px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background-color: white;
+                }
+
+                table {
+                    // height: 100%;
+                    thead {
+                        tr {
+                            th {
+                                font-family: "Nunito", sans-serif;
+
+                                &:nth-child(even) {
+                                    background-color: #ababab;
+                                    color: white;
+                                }
+
+                                &:nth-child(odd) {
+                                    background-color: rgb(171 171 171);
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            .classList {
+                                select {
+                                    border: none;
+                                    outline: 3px solid #b892ff;
+                                    height: 35px;
+                                    border-radius: 4px;
+                                    background-color: #d1c4e9;
+                                    color: white;
+                                    text-transform: capitalize;
+                                }
+                            }
+                            .imageShape{
+                                border-radius: 4px;
+                                height: 100px;
+                                width: 100px;
+                                img{
+                                    border: 4px solid #b892ff;
+                                    width: 80px;
+                                    height: 80px;
+                                    object-fit: cover;
+                                    border-radius: 5px;
+                                }
+                            }
+                         
+                            td {
+                                text-align: center;
+                                .actionsALign {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                                .edit {
+                                    padding: 5px;
+                                    height: 40px;
+                                    width: 40px;
+                                    border-radius: 4px;
+                                    background-color: #00796b;
+                                    color: white;
+                                    cursor: pointer;
+                                }
+
+                                .delete {
+                                    padding: 5px;
+                                    height: 40px;
+                                    width: 40px;
+                                    border-radius: 4px;
+                                    background-color: #f93154;
+                                    color: white;
+                                    cursor: pointer;
+                                    margin-left: 5px;
+                                }
+
+                                font-family: "Poppins", sans-serif;
+
+                                &:nth-child(even) {
+                                    background-color: #dbdbff;
+                                    color: rgb(0, 0, 0);
+                                }
+
+                                &:nth-child(odd) {
+                                    background-color: rgb(208 225 255);
+                                    color: rgb(0, 0, 0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .paginationBtns {
+                // background-color: rgb(43, 117, 255);
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 10px;
+
+                button {
+                    border: none;
+                    outline: none;
+                    background-color: rgb(43, 117, 255);
+                    color: white;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 5px;
+                }
+
+                span {
+                    font-family: "Roboto", sans-serif;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+// component two basically form
+.AddTeacherFormTitle {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+
+    span {
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+.AddTeacherForm {
+    padding: 1px 10px;
+
+    label {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .TeacherFormAlign {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        b {
+            font-size: 18px;
+            font-weight: bold;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .TeacherFormAlignItems {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 10px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(36, 36, 36, 0.1);
+            margin-bottom: 10px;
+
+            .TeacherformAlignitem {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                label {
+                    font-size: 17px;
+                    margin-top: 5px;
+                }
+
+                input {
+                    width: 25px;
+                    height: 24px;
+                    border-radius: 50%;
+                    margin-left: 15px;
+                    cursor: pointer;
+                }
+                .activeGenderRadio {
+                    background-color: #75b5fe;
+                }
+
+                .activeParentRadio {
+                    background-color: #75b5fe;
+                }
+
+                .activeFeeRadio {
+                    background-color: #75b5fe;
+                }
+            }
+        }
+    }
+}
+
+// MyupdatecenterModelstyle
+.MyUpdateCenterModel {
+    position: fixed;
+    top: 0%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(139, 139, 139);
+    z-index: 100;
+    overflow: scroll;
+    overflow-x: hidden;
+
+    .fullupdateform {
+        max-height: 95%;
+        height: 100%;
+        max-width: 95%;
+        width: 800px;
+        overflow: scroll;
+        overflow-x: hidden;
+        .updateForm {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-radius: 7px;
+            background-color: rgb(255, 255, 255);
+            z-index: 101;
+
+            .Title {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                height: 70px;
+                width: 100%;
+                padding: 0px 10px;
+                border-bottom: 1px solid rgba(8, 8, 8, 0.1);
+
+                h2 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    font-family: "Nunito", sans-serif;
+                    margin-top: 5px;
+
+                    span {
+                        font-weight: 400;
+                        font-size: 16px;
+                    }
+                }
+
+                .formClose {
+                    height: 35px;
+                    width: 35px;
+                    cursor: pointer;
+                }
+            }
+
+            .Form {
+                width: 100%;
+                border-bottom: 1px solid rgba(8, 8, 8, 0.1);
+                // background-color: #75b5fe;
+
+                .AddTeacherForm {
+                    padding: 1px 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    height: 100%;
+                    width: 100%;
+                    // background-color: red;
+
+                    .inputLayer {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 100%;
+                        // background-color: red;
+
+                        label {
+                            font-size: 18px;
+                            font-weight: bold;
+                            font-family: "Open Sans", sans-serif;
+                            margin-top: 15px;
+
+                            sup {
+                                color: rgb(224, 4, 4);
+                            }
+                        }
+
+                        input {
+                            height: 40px;
+                            padding-left: 6px;
+                            border-radius: 6px;
+                            border: none;
+                            outline: 1px solid rgba(8, 8, 8, 0.1);
+                            width: 100%;
+                            margin-top: 5px;
+
+                            &:focus {
+                                outline: 3px solid skyblue;
+                            }
+                        }
+                        textarea {
+                            height: 40px;
+                            padding-left: 6px;
+                            border-radius: 6px;
+                            border: none;
+                            outline: 1px solid rgba(8, 8, 8, 0.1);
+                            width: 100%;
+                            margin-top: 5px;
+
+                            &:focus {
+                                outline: 3px solid skyblue;
+                            }
+                        }
+                        select {
+                            height: 40px;
+                            padding-left: 6px;
+                            border-radius: 6px;
+                            border: none;
+                            outline: 1px solid rgba(8, 8, 8, 0.1);
+                            width: 100%;
+                            margin-top: 13px;
+
+                            &:focus {
+                                outline: 3px solid skyblue;
+                            }
+                        }
+                    }
+
+                    .TeacherFormAlign {
+                        margin-top: 15px;
+                    }
+                }
+            }
+
+            .formCloseBtn {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                width: 100%;
+                height: 70px;
+                padding-right: 10px;
+
+                button {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .TeacherDashboardWrapper {
+        .TeacherPageFull {
+            width: 100%;
+        }
+        .TeacherPageSmall {
+            width: 100%;
+        }
+
+        .TeacherPageContainer {
+            .TeacherPageMidPart {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .searchField {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+
+                .table {
+                    width: 650px;
+                    overflow: scroll;
+                    overflow-y: hidden;
+
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                        height: 10px;
+                        background-color: var(--iconColor);
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: var(--iconColor);
+                        width: 10px;
+                        border-radius: 10px;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background-color: white;
+                    }
+
+                    table {
+                        width: 660px;
+                    }
+                }
+            }
+        }
+    }
+
+    // component two basically form
+    .AddTeacherFormTitle {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Nunito", sans-serif;
+
+        span {
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+
+    .AddTeacherForm {
+        .TeacherFormAlign {
+            .TeacherFormAlignItems {
+                .TeacherformAlignitem {
+                    label {
+                        font-size: 15px;
+                        margin-top: 5px;
+                        font-family: "Nunito", sans-serif;
+                    }
+
+                    input {
+                        width: 25px;
+                        height: 24px;
+                        border-radius: 50%;
+                        margin-left: 15px;
+                        cursor: pointer;
+                    }
+                    .activeGenderRadio {
+                        background-color: #75b5fe;
+                    }
+                    .activeParentRadio {
+                        background-color: #75b5fe;
+                    }
+                    .activeFeeRadio {
+                        background-color: #75b5fe;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .TeacherDashboardWrapper {
+        .TeacherPageContainer {
+            .TeacherPageMidPart {
+                .searchField {
+                    gap: 2px;
+
+                    .searchAlign {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 2px;
+
+                        input {
+                            margin-left: 5px;
+                        }
+                    }
+
+                    .sortingsys {
+                        select {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+
+                .table {
+                    width: 550px;
+                    max-width: 90%;
+                    overflow: scroll;
+                    overflow-y: hidden;
+
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                        height: 10px;
+                        background-color: var(--iconColor);
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: var(--iconColor);
+                        width: 10px;
+                        border-radius: 10px;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background-color: white;
+                    }
+
+                    table {
+                        width: 660px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .TeacherDashboardWrapper {
+        .TeacherPageContainer {
+            .TeacherPageMidPart {
+                .searchField {
+                    .searchAlign {
+                        input {
+                            width: 220px;
+                        }
+                    }
+
+                    .sortingsys {
+                        select {
+                            width: 220px;
+                        }
+                    }
+                }
+
+                .table {
+                    width: 270px;
+
+                    table {
+                        width: 350px;
+                    }
+                }
+            }
+        }
+    }
+
+    .MyUpdateCenterModel {
+        .updateForm {
+            .Title {
+                h2 {
+                    font-size: 22px;
+                    margin-top: 7px;
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .Form {
+                .AddTeacherForm {
+                    .inputLayer {
+                        label {
+                            font-size: 18px;
+                            font-weight: bold;
+                            font-family: "Open Sans", sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
