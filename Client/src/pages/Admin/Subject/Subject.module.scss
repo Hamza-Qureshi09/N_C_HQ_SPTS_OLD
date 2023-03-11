@@ -1,0 +1,565 @@
+.SubjectDashboardWrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    height: 89.9vh;
+    
+    .SubjectPageFull {
+        width: 100%;
+        background-color: #e8e8fc;
+        transition: all 0.3s ease-in-out;
+        overflow: scroll;
+        overflow-x: hidden;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: var(--iconColor);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--iconColor);
+            width: 10px;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+    }
+
+    .SubjectPageSmall {
+        width: calc(100% - 250px);
+        background-color: #e8e8fc;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+        overflow: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--iconColor);
+            width: 10px;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+    }
+
+    .SubjectPageContainer {
+        display: flex;
+        flex-direction: column;
+
+        .SubjectPageTopPart {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            button {
+                font-size: 18px;
+
+                .btnPlusIcon {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+
+        .wrapMidPar {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .SubjectPageMidPart {
+            width: 100%;
+            max-width: 1000px;
+            height: 100%;
+            margin-top: 20px;
+
+            .searchField {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                .searchAlign {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    input {
+                        width: 230px;
+                        margin-right: 2px;
+                        font-family: "Open Sans", sans-serif;
+                    }
+
+                    .formButtons {
+                        button {
+                            font-family: "Open Sans", sans-serif;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+
+                .sortingsys {
+                    select {
+                        height: 40px;
+                        width: 200px;
+                    }
+                }
+            }
+
+            .table {
+                height: 100%;
+                margin-top: 20px;
+
+                table {
+
+                    // height: 100%;
+                    thead {
+                        tr {
+                            th {
+                                font-family: "Nunito", sans-serif;
+
+                                &:nth-child(even) {
+                                    background-color: #ababab;
+                                    color: white;
+                                }
+
+                                &:nth-child(odd) {
+                                    background-color: rgb(171 171 171);
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            td {
+                                .actionsALign {
+                                     display: flex;
+                                     flex-direction: row;
+                                     justify-content: center;
+                                     align-items: center;
+                                     width: 100%;
+                                     height: 100%;
+                                 }
+                                .edit {
+                                    padding: 5px;
+                                    height: 40px;
+                                    width: 40px;
+                                    border-radius: 4px;
+                                     background-color: #00796B;
+                                    color: white;
+                                    cursor: pointer;
+                                }
+
+                                .delete {
+                                    padding: 5px;
+                                    height: 40px;
+                                    width: 40px;
+                                    border-radius: 4px;
+                                     background-color: #F93154;
+                                    color: white;
+                                    cursor: pointer;
+                                    margin-left: 5px;
+                                }
+
+                                font-family: "Poppins",
+                                sans-serif;
+
+                                &:nth-child(even) {
+                                    background-color: #dbdbff;
+                                    color: rgb(0, 0, 0);
+                                }
+
+                                &:nth-child(odd) {
+                                    background-color: rgb(208 225 255);
+                                    color: rgb(0, 0, 0);
+                                }
+                                &:last-child {
+                                    background-color: transparent;
+                                    color: rgb(0, 0, 0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .paginationBtns {
+                // background-color: rgb(43, 117, 255);
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 10px;
+
+                button {
+                    border: none;
+                    outline: none;
+                    background-color: rgb(43, 117, 255);
+                    color: white;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 5px;
+                }
+
+                span {
+                    font-family: "Roboto", sans-serif;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+// component two basically form
+.AddSubjectFormTitle {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+
+    span {
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+.AddSubjectForm {
+    padding: 1px 10px;
+
+    label {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Open Sans", sans-serif;
+    }
+}
+
+// MyupdatecenterModelstyle
+.MyUpdateCenterModel {
+    position: fixed;
+    top: 0%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    z-index: 100;
+
+    .updateForm {
+        position: absolute;
+        max-width: 95%;
+        width: 800px;
+        height: 415px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        align-items: flex-start;
+        border-radius: 7px;
+        background-color: white;
+        z-index: 101;
+
+        .Title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            width: 100%;
+            padding: 0px 10px;
+            border-bottom: 1px solid rgba(8, 8, 8, 0.1);
+
+            h2 {
+                font-size: 24px;
+                font-weight: bold;
+                font-family: "Nunito", sans-serif;
+                margin-top: 5px;
+
+                span {
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+
+            .formClose {
+                height: 35px;
+                width: 35px;
+                cursor: pointer;
+            }
+        }
+
+        .Form {
+            height: 300px;
+            width: 100%;
+            border-bottom: 1px solid rgba(8, 8, 8, 0.1);
+
+            .AddSubjectForm {
+                padding: 1px 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                height: 100%;
+                width: 100%;
+
+                .inputLayer {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 100%;
+
+                    label {
+                        font-size: 18px;
+                        font-weight: bold;
+                        font-family: "Open Sans", sans-serif;
+                    }
+
+                    input {
+                        height: 40px;
+                        padding-left: 6px;
+                        border-radius: 6px;
+                        border: none;
+                        outline: 1px solid rgba(8, 8, 8, 0.1);
+                        width: 100%;
+                        margin-top: 5px;
+
+                        &:focus {
+                            outline: 3px solid skyblue;
+                        }
+                    }
+                    select {
+                        height: 40px;
+                        padding-left: 6px;
+                        border-radius: 6px;
+                        border: none;
+                        outline: 1px solid rgba(8, 8, 8, 0.1);
+                        width: 100%;
+                        margin-top: 5px;
+
+                        &:focus {
+                            outline: 3px solid skyblue;
+                        }
+                    }
+                }
+            }
+        }
+
+        .formCloseBtn {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
+            height: 70px;
+            padding-right: 10px;
+
+            button {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .SubjectDashboardWrapper {
+        .SubjectPageFull {
+            width: 100%;
+        }
+
+        .SubjectPageSmall {
+            width: 100%;
+        }
+
+        .SubjectPageContainer {
+            .SubjectPageMidPart {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .searchField {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+
+                .table {
+                    width: 650px;
+                    overflow: scroll;
+                    overflow-y: hidden;
+
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                        height: 10px;
+                        background-color: var(--iconColor);
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: var(--iconColor);
+                        width: 10px;
+                        border-radius: 10px;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background-color: white;
+                    }
+
+                    table {
+                        width: 660px;
+                    }
+                }
+            }
+        }
+    }
+
+    // component two basically form
+    .AddSubjectFormTitle {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Nunito", sans-serif;
+
+        span {
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .SubjectDashboardWrapper {
+        .SubjectPageContainer {
+            .SubjectPageMidPart {
+                .searchField {
+                    gap: 2px;
+
+                    .searchAlign {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 2px;
+
+                        input {
+                            margin-left: 5px;
+                        }
+                    }
+
+                    .sortingsys {
+                        select {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+
+                .table {
+                    width: 550px;
+                    max-width: 90%;
+                    overflow: scroll;
+                    overflow-y: hidden;
+
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                        height: 10px;
+                        background-color: var(--iconColor);
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: var(--iconColor);
+                        width: 10px;
+                        border-radius: 10px;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background-color: white;
+                    }
+
+                    table {
+                        width: 660px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .SubjectDashboardWrapper {
+        .SubjectPageContainer {
+            .SubjectPageMidPart {
+                .searchField {
+                    .searchAlign {
+                        input {
+                            width: 220px;
+                        }
+                    }
+
+                    .sortingsys {
+                        select {
+                            width: 220px;
+                        }
+                    }
+                }
+
+                .table {
+                    width: 270px;
+
+                    table {
+                        width: 350px;
+                    }
+                }
+            }
+        }
+    }
+
+    .MyUpdateCenterModel {
+        .updateForm {
+            .Title {
+                h2 {
+                    font-size: 22px;
+                    margin-top: 7px;
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .Form {
+                .AddSubjectForm {
+                    .inputLayer {
+                        label {
+                            font-size: 18px;
+                            font-weight: bold;
+                            font-family: "Open Sans", sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

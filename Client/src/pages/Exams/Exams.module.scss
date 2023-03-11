@@ -1,0 +1,599 @@
+.ExamDashboardWrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    height: 89.9vh;
+
+    .ExamPageFull {
+        width: 100%;
+        background-color: #e8e8fc;
+        transition: all 0.3s ease-in-out;
+        overflow: scroll;
+        overflow-x: hidden;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: var(--iconColor);
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--iconColor);
+            width: 10px;
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+    }
+    .ExamPageSmall {
+        width: calc(100% - 250px);
+        background-color: #e8e8fc;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+        overflow: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--iconColor);
+            width: 10px;
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+    }
+
+    .ExamPageContainer {
+        display: flex;
+        flex-direction: column;
+
+        .ExamPageTopPart {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            button {
+                font-size: 18px;
+                .btnPlusIcon {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+
+        .wrapMidPar {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ExamPageMidPart {
+            width: 100%;
+            max-width: 1000px;
+            height: 100%;
+            margin-top: 20px;
+
+            .searchField {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 10px;
+                .searchAlign {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    input {
+                        width: 230px;
+                        margin-right: 2px;
+                        font-family: "Open Sans", sans-serif;
+                    }
+
+                    .formButtons {
+                        button {
+                            font-family: "Open Sans", sans-serif;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+                .sortingsys {
+                    select {
+                        height: 40px;
+                        width: 200px;
+                    }
+                }
+            }
+
+            .table {
+                height: 100%;
+                margin-top: 20px;
+                overflow: scroll;
+                &::-webkit-scrollbar {
+                    width: 5px;
+                    height: 5px;
+                    background-color: var(--iconColor);
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: var(--iconColor);
+                    width: 5px;
+                    border-radius: 10px;
+                }
+                &::-webkit-scrollbar-track {
+                    background-color: white;
+                }
+
+                table {
+                    // height: 100%;
+                    thead {
+                        tr {
+                            th {
+                                font-family: "Nunito", sans-serif;
+                                &:nth-child(even) {
+                                    background-color: #ababab;
+                                    color: white;
+                                }
+                                &:nth-child(odd) {
+                                    background-color: rgb(171 171 171);
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                .actionsALign {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                .edit {
+                                    padding: 5px;
+                                    height: 40px;
+                                    width: 40px;
+                                    border-radius: 4px;
+                                    background-color: rgb(45, 156, 5);
+                                    color: white;
+                                    cursor: pointer;
+                                }
+                                .delete {
+                                    padding: 5px;
+                                    height: 40px;
+                                    width: 40px;
+                                    border-radius: 4px;
+                                    background-color: rgb(243, 0, 0);
+                                    color: white;
+                                    cursor: pointer;
+                                    margin-left: 5px;
+                                }
+                                font-family: "Poppins", sans-serif;
+                                &:nth-child(even) {
+                                    background-color: #dbdbff;
+                                    color: rgb(0, 0, 0);
+                                }
+                                &:nth-child(odd) {
+                                    background-color: rgb(208 225 255);
+                                    color: rgb(0, 0, 0);
+                                }
+                                &:last-child {
+                                    background-color: transparent;
+                                    color: rgb(0, 0, 0);
+                                }
+
+                                button {
+                                    border: none;
+                                    outline: none;
+                                    width: 100px;
+                                    height: 35px;
+                                    border-radius: 4px;
+                                    background-color: rgb(255 89 89);
+                                    color: white;
+                                    font-family: 'Poppins', sans-serif;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 14px;
+                                    margin: 0;
+
+                                    .addResultBtn{
+                                        height: 18px;
+                                        width: 18px;
+                                        font-size: 14px;
+                                    }
+                                }
+                                .imageShape{
+                                    height: 80px;
+                                    width: 80px;
+                                    border-radius: 5px;
+                                    border: 3px solid skyblue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .paginationBtns {
+                // background-color: rgb(43, 117, 255);
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 10px;
+
+                button {
+                    border: none;
+                    outline: none;
+                    background-color: rgb(43, 117, 255);
+                    color: white;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 5px;
+                }
+                span {
+                    font-family: "Roboto", sans-serif;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+// component two basically form
+.AddExamFormTitle {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+
+    span {
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+.AddExamForm {
+    padding: 1px 10px;
+
+    label {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Open Sans", sans-serif;
+    }
+}
+
+// MyupdatecenterModelstyle
+.MyUpdateCenterModel {
+    position: fixed;
+    top: 0%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(139, 139, 139);
+    z-index: 100;
+    overflow: scroll;
+    overflow-x: hidden;
+
+    .fullupdateform {
+        max-height: 95%;
+        height: 610px;
+        max-width: 95%;
+        width: 800px;
+        overflow: scroll;
+        overflow-x: hidden;
+        .updateForm {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-radius: 7px;
+            background-color: rgb(255, 255, 255);
+            z-index: 101;
+
+            .Title {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                height: 70px;
+                width: 100%;
+                padding: 0px 10px;
+                border-bottom: 1px solid rgba(8, 8, 8, 0.1);
+
+                h2 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    font-family: "Nunito", sans-serif;
+                    margin-top: 5px;
+
+                    span {
+                        font-weight: 400;
+                        font-size: 16px;
+                    }
+                }
+
+                .formClose {
+                    height: 35px;
+                    width: 35px;
+                    cursor: pointer;
+                }
+            }
+
+            .Form {
+                width: 100%;
+                border-bottom: 1px solid rgba(8, 8, 8, 0.1);
+                // background-color: #75b5fe;
+
+                .AddExamForm {
+                    padding: 1px 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    height: 100%;
+                    width: 100%;
+                    // background-color: red;
+
+                    .inputLayer {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 100%;
+
+                        label {
+                            font-size: 18px;
+                            font-weight: bold;
+                            font-family: "Open Sans", sans-serif;
+                            margin-top: 15px;
+
+                            sup {
+                                color: rgb(224, 4, 4);
+                            }
+                        }
+
+                        input {
+                            height: 40px;
+                            padding-left: 6px;
+                            border-radius: 6px;
+                            border: none;
+                            outline: 1px solid rgba(8, 8, 8, 0.1);
+                            width: 100%;
+                            margin-top: 5px;
+
+                            &:focus {
+                                outline: 3px solid skyblue;
+                            }
+                        }
+                        select {
+                            height: 40px;
+                            padding-left: 6px;
+                            border-radius: 6px;
+                            border: none;
+                            outline: 1px solid rgba(8, 8, 8, 0.1);
+                            width: 100%;
+                            margin-top: 0px;
+
+                            &:focus {
+                                outline: 3px solid skyblue;
+                            }
+                        }
+
+                        textarea {
+                            height: 40px;
+                            padding-left: 6px;
+                            border-radius: 6px;
+                            border: none;
+                            outline: 1px solid rgba(8, 8, 8, 0.1);
+                            width: 100%;
+                            margin-top: 5px;
+
+                            &:focus {
+                                outline: 3px solid skyblue;
+                            }
+                        }
+                    }
+
+                    .studentFormAlign {
+                        margin-top: 15px;
+                    }
+                }
+            }
+
+            .formCloseBtn {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                width: 100%;
+                height: 70px;
+                padding-right: 10px;
+
+                button {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .ExamDashboardWrapper {
+        .ExamPageFull {
+            width: 100%;
+        }
+        .ExamPageSmall {
+            width: 100%;
+        }
+
+        .ExamPageContainer {
+            .ExamPageMidPart {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .searchField {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+                .table {
+                    width: 650px;
+                    overflow: scroll;
+                    overflow-y: hidden;
+
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                        height: 10px;
+                        background-color: var(--iconColor);
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background-color: var(--iconColor);
+                        width: 10px;
+                        border-radius: 10px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background-color: white;
+                    }
+                    table {
+                        width: 660px;
+                    }
+                }
+            }
+        }
+    }
+
+    // component two basically form
+    .AddExamFormTitle {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Nunito", sans-serif;
+
+        span {
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+}
+@media (max-width: 700px) {
+    .ExamDashboardWrapper {
+        .ExamPageContainer {
+            .ExamPageMidPart {
+                .searchField {
+                    gap: 2px;
+                    .searchAlign {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 2px;
+                        input {
+                            margin-left: 5px;
+                        }
+                    }
+                    .sortingsys {
+                        select {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+                .table {
+                    width: 550px;
+                    max-width: 90%;
+                    overflow: scroll;
+                    overflow-y: hidden;
+
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                        height: 10px;
+                        background-color: var(--iconColor);
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background-color: var(--iconColor);
+                        width: 10px;
+                        border-radius: 10px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background-color: white;
+                    }
+                    table {
+                        width: 660px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 425px) {
+    .ExamDashboardWrapper {
+        .ExamPageContainer {
+            .ExamPageMidPart {
+                .searchField {
+                    .searchAlign {
+                        input {
+                            width: 220px;
+                        }
+                    }
+                    .sortingsys {
+                        select {
+                            width: 220px;
+                        }
+                    }
+                }
+                .table {
+                    width: 270px;
+                    table {
+                        width: 350px;
+                    }
+                }
+            }
+        }
+    }
+
+    .MyUpdateCenterModel {
+        .updateForm {
+            .Title {
+                h2 {
+                    font-size: 22px;
+                    margin-top: 7px;
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .Form {
+                .AddExamForm {
+                    .inputLayer {
+                        label {
+                            font-size: 18px;
+                            font-weight: bold;
+                            font-family: "Open Sans", sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

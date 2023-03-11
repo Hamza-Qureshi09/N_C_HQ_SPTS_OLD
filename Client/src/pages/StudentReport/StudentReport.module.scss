@@ -1,0 +1,604 @@
+.StudentReportDashboardWrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    height: 89.9vh;
+
+    .StudentReportPageFull {
+        width: 100%;
+        background-color: #e8e8fc;
+        transition: all 0.3s ease-in-out;
+        overflow: scroll;
+        overflow-x: hidden;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: var(--iconColor);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--iconColor);
+            width: 10px;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+    }
+
+    .StudentReportPageSmall {
+        width: calc(100% - 250px);
+        background-color: #e8e8fc;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+        overflow: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--iconColor);
+            width: 10px;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+    }
+
+    .StudentReportPageContainer {
+        display: flex;
+        flex-direction: column;
+
+        .StudentReportPageTopPart {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgb(193, 197, 230);
+            border-radius: 5px;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-family: "Open Sans", sans-serif;
+
+            .leftSide,
+            .rightSide {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                /* align-items: center; */
+                font-size: 14px;
+                // background-color: rgb(83, 42, 42);
+                height: 115px;
+                h1 {
+                    font-size: 19px;
+                    font-weight: bolder;
+                    font-family: "Open Sans", sans-serif;
+                }
+
+                input,
+                select {
+                    height: 35px;
+                    border: none;
+                    outline: 1px solid skyblue;
+                    padding-left: 4px;
+                    width: 250px;
+                    border-radius: 3px;
+                }
+                button {
+                    border-radius: 3px;
+                    border: none;
+                    margin-top: 5px;
+                    font-size: 15px;
+                    font-family: "Open Sans", sans-serif;
+                    background-color: #701ccf;
+                }
+            }
+        }
+
+        .wrapMidPar {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+    .downloadButton {
+        position: fixed;
+        bottom: 3%;
+        right: 3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 45px;
+            width: 45px;
+            border: none;
+            outline: none;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #006aff;
+            cursor: pointer;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            text-align: center;
+            font-family: "Nunito", sans-serif;
+            color: white;
+
+            .downloadButtonIcon {
+                height: 32px;
+                width: 32px;
+            }
+        }
+    }
+
+            .StudentReportPageMidPart {
+                width: 100%;
+                max-width: 1100px;
+                height: 100%;
+                margin-top: 20px;
+                padding: 10px;
+                h1 {
+                    font-family: "Nunito", sans-serif;
+                    font-size: 28px;
+                    margin-bottom: 20px;
+                }
+                .StudentReport {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    background-color: rgb(255, 255, 255);
+                    width: 100%;
+                    height: 100%;
+                    .TopPart {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        margin-top: 10px;
+                        .Profile {
+                            height: 100px;
+                            width: 100px;
+                            border-radius: 50%;
+                            border: 3px solid skyblue;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 50%;
+                            }
+                        }
+                        .GeneralInfo {
+                            height: 90px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            h1 {
+                                font-family: "Nunito", sans-serif;
+                                font-size: 24px;
+                                color: rgba(0, 0, 0, 0.6);
+                                margin: 0;
+                                text-transform: capitalize;
+                            }
+
+                            b {
+                                font-family: "Roboto", sans-serif;
+                                font-size: 16px;
+                                color: rgba(0, 0, 0, 0.4);
+                            }
+                        }
+                    }
+                    .MidPart {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 20px;
+                        flex-wrap: wrap;
+                        height: 100%;
+                        width: 100%;
+                        margin-top: 10px;
+
+                        .leftInfoPart,
+                        .RightInfoPart {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            flex: 1;
+                            padding: 8px;
+                            h2 {
+                                font-family: "Nunito", sans-serif;
+                                font-size: 24px;
+                            }
+                            span {
+                                font-family: "Poppins", sans-serif;
+                                font-size: 16px;
+                                width: 100%;
+                                p {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    height: 40px;
+                                    margin: 0;
+                                    b,
+                                    span {
+                                        flex: 1;
+                                        justify-content: flex-start;
+                                        align-items: flex-start;
+                                        align-items: flex-start;
+                                        text-align: start;
+                                        text-transform: capitalize;
+                                    }
+                                    &:nth-child(1) {
+                                        background-color: #cbe1ff;
+                                    }
+                                    &:nth-child(2) {
+                                        background-color: #c0efbc;
+                                    }
+                                    &:nth-child(3) {
+                                        background-color: #ffd08a;
+                                    }
+                                    &:nth-child(4) {
+                                        background-color: #dbd9ff;
+                                    }
+                                }
+                            }
+                        }
+                        .RightInfoPart {
+                            span {
+                                p {
+                                    &:nth-child(4) {
+                                        background-color: #dbd9ff;
+                                        span {
+                                            font-size: 13px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .BottomPart {
+                        margin-top: 10px;
+                        background-color: rgb(243, 243, 243);
+                        width: 100%;
+                        table {
+                            font-family: "Roboto", sans-serif;
+                            text-transform: capitalize;
+                            thead {
+                                background-color: #5e5e5e;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// MyupdatecenterModelstyle
+.AuthenticateUserForm {
+    position: fixed;
+    top: 0%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(150, 150, 150);
+    z-index: 100;
+
+    .AuthenticationForm {
+        position: absolute;
+        max-width: 95%;
+        width: 800px;
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        align-items: flex-start;
+        border-radius: 7px;
+        background-color: white;
+        z-index: 101;
+
+        .Title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+            width: 100%;
+            padding: 0px 10px;
+            border-bottom: 1px solid rgba(8, 8, 8, 0.1);
+
+            h2 {
+                font-size: 24px;
+                font-weight: bold;
+                font-family: "Nunito", sans-serif;
+                margin-top: 5px;
+
+                span {
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+
+            .formClose {
+                height: 35px;
+                width: 35px;
+                cursor: pointer;
+            }
+        }
+
+        .Form {
+            height: 300px;
+            width: 100%;
+            border-bottom: 1px solid rgba(8, 8, 8, 0.1);
+
+            .AuthUserFields {
+                padding: 1px 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                height: 100%;
+                width: 100%;
+
+                .inputLayer {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 100%;
+
+                    label {
+                        font-size: 18px;
+                        font-weight: bold;
+                        font-family: "Open Sans", sans-serif;
+                    }
+
+                    input {
+                        height: 40px;
+                        padding-left: 6px;
+                        border-radius: 6px;
+                        border: none;
+                        outline: 1px solid rgba(8, 8, 8, 0.1);
+                        width: 100%;
+                        margin-top: 5px;
+
+                        &:focus {
+                            outline: 3px solid skyblue;
+                        }
+                    }
+                    select {
+                        height: 40px;
+                        padding-left: 6px;
+                        border-radius: 6px;
+                        border: none;
+                        outline: 1px solid rgba(8, 8, 8, 0.1);
+                        width: 100%;
+                        margin-top: 5px;
+
+                        &:focus {
+                            outline: 3px solid skyblue;
+                        }
+                    }
+                }
+            }
+        }
+
+        .formCloseBtn {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
+            height: 70px;
+            padding-right: 10px;
+
+            button {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .StudentReportDashboardWrapper {
+        .StudentReportPageFull {
+            width: 100%;
+        }
+
+        .StudentReportPageSmall {
+            width: 100%;
+        }
+
+        .StudentReportPageContainer {
+            .StudentReportPageMidPart {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .searchField {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+
+    // component two basically form
+    .AddStudentReportFormTitle {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Nunito", sans-serif;
+
+        span {
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .StudentReportDashboardWrapper {
+        .StudentReportPageContainer {
+            .wrapMidPar {
+                .StudentReportPageMidPart {
+                    h1 {
+                        font-family: "Nunito", sans-serif;
+                        font-size: 22px;
+                    }
+                    .StudentReport {
+                        .MidPart {
+                            .leftInfoPart,
+                            .RightInfoPart {
+                                width: 100%;
+                                flex: none;
+                                span {
+                                    font-size: 14px;
+                                }
+                            }
+                            .RightInfoPart {
+                                span {
+                                    p {
+                                        &:nth-child(4) {
+                                            background-color: #dbd9ff;
+                                            span {
+                                                font-size: 13px;
+                                            }
+                                        }
+                                        &:nth-child(3) {
+                                            span {
+                                                font-size: 12px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .BottomPart {
+                            margin-top: 10px;
+                            background-color: rgb(243, 243, 243);
+                            width: 100%;
+                            overflow: scroll;
+
+                            &::-webkit-scrollbar {
+                                width: 10px;
+                                height: 5px;
+                            }
+
+                            &::-webkit-scrollbar-thumb {
+                                background-color: var(--iconColor);
+                                width: 10px;
+                                border-radius: 10px;
+                            }
+
+                            &::-webkit-scrollbar-track {
+                                background-color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 425px) {
+    .StudentReportDashboardWrapper {
+        .StudentReportPageContainer {
+            .StudentReportPageTopPart{
+                .leftSide{
+                    select{
+                        width: 210px;
+                    }
+                }
+            }
+            .wrapMidPar {
+                .StudentReportPageMidPart {
+                    h1 {
+                        font-family: "Nunito", sans-serif;
+                        font-size: 22px;
+                    }
+                    .StudentReport {
+                        .MidPart {
+                            .leftInfoPart,
+                            .RightInfoPart {
+                                width: 100%;
+                                flex: none;
+                                span {
+                                    font-size: 14px;
+                                }
+                            }
+                            .RightInfoPart {
+                                span {
+                                    p {
+                                        &:nth-child(4) {
+                                            background-color: #dbd9ff;
+                                            span {
+                                                font-size: 13px;
+                                            }
+                                        }
+                                        &:nth-child(3) {
+                                            span {
+                                                font-size: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .BottomPart {
+                            margin-top: 10px;
+                            background-color: rgb(243, 243, 243);
+                            width: 100%;
+                            overflow: scroll;
+
+                            &::-webkit-scrollbar {
+                                width: 10px;
+                                height: 5px;
+                            }
+
+                            &::-webkit-scrollbar-thumb {
+                                background-color: var(--iconColor);
+                                width: 10px;
+                                border-radius: 10px;
+                            }
+
+                            &::-webkit-scrollbar-track {
+                                background-color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
