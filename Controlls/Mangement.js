@@ -925,6 +925,7 @@ class Management {
             const findStudent = await studentModel.findByIdAndUpdate(
                 { _id: Id },
                 {
+<<<<<<< HEAD
                     $push: {
                         Smarks: {
                             Title: ExamTitle,
@@ -933,6 +934,14 @@ class Management {
                             TotalMarks: ExamInfoSubjectAndMarks[1],
                             ObtainMarks: ObtaineMarks,
                         }
+=======
+                    Smarks: {
+                        Title: ExamTitle,
+                        Class: findExamClass.Class,
+                        Subject: ExamInfoSubjectAndMarks[0],
+                        TotalMarks: ExamInfoSubjectAndMarks[1],
+                        ObtainMarks: ObtaineMarks,
+>>>>>>> origin/master
                     }
                 },
                 { new: true, upsert: true }

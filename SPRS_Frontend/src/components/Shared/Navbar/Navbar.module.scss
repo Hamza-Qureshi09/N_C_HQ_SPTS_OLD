@@ -1,0 +1,380 @@
+:root {
+    --iconColor: #716fff;
+}
+.Navbar {
+    // background-color: rgb(255, 16, 16);
+    min-height: 70px;
+    max-height: 10vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .leftSide {
+        width: 250px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-left: 15px;
+            height: 100%;
+            text-align: center;
+
+            img {
+                height: 35px;
+                width: 40px;
+            }
+            h3 {
+                padding-left: 5px;
+                font-size: 1.6rem;
+                font-weight: bold;
+                padding-top: 3px;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+
+        .Hamburger {
+            .menu {
+                background-color: #dbdbff;
+                height: 38px;
+                width: 38px;
+                border-radius: 6px;
+                padding: 4px;
+                cursor: pointer;
+                color: var(--iconColor);
+            }
+        }
+    }
+
+    .rightSide {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        flex: 1;
+
+        .navbarName {
+            align-self: center;
+            text-align: center;
+            padding-left: 10px;
+
+            h1 {
+                font-size: 1.5rem;
+                color: var(--iconColor);
+                font-family: 'Poppins', sans-serif;
+            }
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 170px;
+            font-size: 1.5rem;
+            padding: 0;    
+            margin-top: 15px;
+            position: relative;
+
+            .notification {
+                border-radius: 6px;
+                padding: 2px;
+                height: 35px;
+                width: 35px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: #dbdbff;
+                color: var(--iconColor);
+            }
+
+            .ProfileAndSetting {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #dcf1f5;
+                padding: 15px 10px;
+                margin-right: 15px;
+                height: 50px;
+                width: 110px;
+                border-radius: 30px;
+
+                .profile {
+                    border: 1px solid skyblue;
+                    border-radius: 50%;
+                    height: 42px;
+                    width: 42px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        border-radius: 50%;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .profileSetting {
+                    border-radius: 50%;
+                    height: 35px;
+                    width: 35px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--iconColor);
+                }
+            }
+        }
+
+        .ProfileDropDownMenu{
+            position: absolute;
+            right: 1%;
+            top: 10vh;
+            height: 260px;
+            width: 250px;
+            background-color: #ffffff;
+            border: 1px solid rgba(104, 104, 104,.4);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            z-index: 98;
+
+            .topPart{
+                height: 150px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;    
+                padding-top: 20px;
+
+                .ProfileCircle{
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                    border: 2px dashed #5c59f3;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                }
+
+                b{
+                    font-size: 1.5rem;
+                    font-family: "Nunito", sans-serif;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    text-decoration: underline;
+                    color: #646464;
+                    /* text-overflow: ellipsis; */
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    height: 30px;
+                    text-align: center;
+                }
+                p{
+                    font-size: 1rem;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 400;
+                    // margin-top: 5px;
+                    color: #a5a5a5;
+                }
+            }
+
+            .bottomPart{
+                display: flex;
+                flex-direction: column;
+                height: 108px;
+                width: 100%;
+                border-top: 1px solid rgba(196, 196, 196,.4);
+                
+                .items{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: 54px;
+                    width: 100%;
+                    border-bottom: 1px solid rgba(196, 196, 196,.4);
+
+                    .itemIcon{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        height: 40px;
+                        width: 40px;
+                        border-right: 1px solid rgba(196, 196, 196,.4);
+
+                        .icon{
+                            height: 30px;
+                            width: 40px;
+                            color: rgb(112, 112, 112);
+                            margin-left: 6px;
+                        }
+                    }
+                    b,a,span{
+                        padding-left: 12px;
+                        font-size: 1.2rem;
+                        font-family: "Poppins", sans-serif;
+                        font-weight: 500;
+                        color: #5757e5;
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 900px) {
+    .Navbar {
+        .leftSide {
+            width: 60px;
+            padding-left: 15px;
+
+            .logo {
+                display: none;
+            }
+            .Hamburger {
+                .menu {
+                    background-color: #dbdbff;
+                    height: 38px;
+                    width: 38px;
+                    border-radius: 6px;
+                    padding: 4px;
+                    color: var(--iconColor);
+                }
+            }
+        }
+
+        .rightSide {
+
+            .navbarName {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h1 {
+                    font-size: 1.3rem;
+                    padding: 0;
+                    margin: 0;
+                    font-family: 'Roboto', sans-serif;
+                }
+            }
+
+            .links {
+                .notification {
+                    height: 32px;
+                    width: 32px;
+                }
+
+                .ProfileAndSetting {
+                    background-color: #dbdbff;
+
+                    .profile {
+                        height: 38px;
+                        width: 38px;
+                    }
+                    .profileSetting {
+                        height: 32px;
+                        width: 32px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .Navbar {
+        .leftSide {
+            width: 50px;
+            padding-left: 15px;
+
+            .logo {
+                display: none;
+            }
+            .Hamburger {
+                .menu {
+                    background-color: #dbdbff;
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 6px;
+                    padding: 4px;
+                    color: var(--iconColor);
+                }
+            }
+        }
+
+        .rightSide {
+
+            .navbarName {
+                padding-left: 2px;
+                h1 {
+                    font-size: 1.1rem;
+                    padding: 0;
+                    margin: 0;
+                    font-family: 'Roboto', sans-serif;
+                }
+            }
+
+            .links {
+                width: 140px;
+
+                .notification {
+                    height: 30px;
+                    width: 30px;
+                }
+
+                .ProfileAndSetting {
+                    background-color: #dbdbff;
+                    height: 45px;
+                    width: 90px;
+                    border-radius: 30px;
+
+                    .profile {
+                        height: 33px;
+                        width: 33px;
+                    }
+                    .profileSetting {
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

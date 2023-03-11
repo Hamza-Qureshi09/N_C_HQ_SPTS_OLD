@@ -23,10 +23,6 @@ app.use(cors({
 // for static images or avatar url
 app.use('/Storage', express.static(path.join(__dirname, './Storage')));
 
-app.get('/',(req,res)=>{
-    res.send('comming')
-})
-
 // api routes
 app.use("/api", Routes)
 

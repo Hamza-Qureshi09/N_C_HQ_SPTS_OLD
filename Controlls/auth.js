@@ -1,13 +1,21 @@
 const user = require("../models/user")
 const RefreshToken = require('../models/RefreshToken')
 const jwt = require("jsonwebtoken")
+<<<<<<< HEAD
 const utils = (data) => {
+=======
+const utils = (data) => { 
+>>>>>>> origin/master
     return ({
         Username: data.Username,
         Useremail: data.Useremail,
         id: data._id,
         Role: data.Role,
+<<<<<<< HEAD
         userImage: data.userImage
+=======
+        userImage:data.userImage
+>>>>>>> origin/master
     })
 }
 class AuthControlles {
@@ -17,9 +25,15 @@ class AuthControlles {
         if (!username || !email || !password) {
             return res.status(400).json({ message: "Invalid credentials" })
         }
+<<<<<<< HEAD
 
         // finding existing user
         const findUser = await user.findOne({ Useremail: email, Password: password });
+=======
+        
+        // finding existing user
+        const findUser = await user.findOne({ Useremail:email, Password:password });
+>>>>>>> origin/master
         // console.log(findUser)
         // console.log(username, email, password)
         if (findUser) {
@@ -30,22 +44,37 @@ class AuthControlles {
                 expires: new Date(Date.now() + 3600000)//1hour
             })
             const updatedrefreshTokenforuser = await jwt.sign({ _id: findUser._id }, process.env.SecretKeyToken, { expiresIn: "7d" });
+<<<<<<< HEAD
             const findRefreshToken = await RefreshToken.findOne({
                 userID: findUser._id
             })
             if (findRefreshToken) {
+=======
+            const findRefreshToken=await RefreshToken.findOne({
+                userID: findUser._id 
+            })
+            if(findRefreshToken){
+>>>>>>> origin/master
                 await RefreshToken.findOneAndUpdate(
                     { userID: findUser._id },
                     { RefreshToken: updatedrefreshTokenforuser },
                     { new: true }
                 )
+<<<<<<< HEAD
             } else {
+=======
+            }else{
+>>>>>>> origin/master
                 await RefreshToken({
                     userID: findUser._id,
                     RefreshToken: updatedrefreshTokenforuser
                 }).save()
             }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/master
             return res.status(200).json(utils(findUser))
         }
 
@@ -70,12 +99,20 @@ class AuthControlles {
             })
             return res.status(200).json(utils(saveadmin))
         }
+<<<<<<< HEAD
         return res.status(400).json({ message: "Login failed" })
+=======
+        return res.status(400).json({message:"Login failed"})
+>>>>>>> origin/master
     }
 
 
     // refreshTokenRequest
+<<<<<<< HEAD
     async RefreshTokenRqst(req, res) {
+=======
+    async RefreshTokenRqst(req, res) { 
+>>>>>>> origin/master
         const { User } = req.cookies;
         if (User) {
             const verifyAccessToken = await jwt.verify(User, `${process.env.SecretKeyToken}`)
@@ -92,6 +129,7 @@ class AuthControlles {
                     httpOnly: true,
                     expires: new Date(Date.now() + 3600000)//1hour
                 })
+<<<<<<< HEAD
                 return res.status(200).json(utils(findUserAndUpdateAccessToken))
             }
 
@@ -99,6 +137,12 @@ class AuthControlles {
         else {
             res.status(401).json({ message: "unauthorized user!" })
         }
+=======
+                return res.status(200).json(utils(findUserAndUpdateAccessToken)) 
+            }
+
+        }
+>>>>>>> origin/master
     }
 
 
@@ -124,9 +168,15 @@ class AuthControlles {
 
 
     // here logout request 
+<<<<<<< HEAD
     async LogoutUser(req, res) {
         const { User } = req.cookies;
         if (User) {
+=======
+    async LogoutUser(req,res){
+        const {User}=req.cookies;
+        if(User){
+>>>>>>> origin/master
             const verifyUser = await jwt.verify(User, `${process.env.SecretKeyToken}`)
             const UserID = verifyUser._id
             await user.findOneAndUpdate(
@@ -140,7 +190,11 @@ class AuthControlles {
                 { new: true }
             )
             res.clearCookie("User")
+<<<<<<< HEAD
             res.status(200).json({ message: "logout" })
+=======
+            res.status(200).json({message:"logout"})
+>>>>>>> origin/master
         }
     }
 }

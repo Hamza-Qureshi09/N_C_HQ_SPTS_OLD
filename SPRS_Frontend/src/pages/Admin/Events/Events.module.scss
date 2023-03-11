@@ -1,0 +1,626 @@
+.EventDashboardWrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    height: 89.9vh;
+
+    .EventPageFull {
+        width: 100%;
+        background-color: #e8e8fc;
+        transition: all 0.3s ease-in-out;
+        overflow: scroll;
+        overflow-x: hidden;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: var(--iconColor);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--iconColor);
+            width: 10px;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+    }
+
+    .EventPageSmall {
+        width: calc(100% - 250px);
+        background-color: #e8e8fc;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+        overflow: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--iconColor);
+            width: 10px;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+    }
+
+    .EventPageContainer {
+        display: flex;
+        flex-direction: column;
+
+        .EventPageTopPart {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            button {
+                font-size: 18px;
+
+                .btnPlusIcon {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+
+        .wrapMidPar {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .EventPageMidPart {
+            width: 100%;
+            max-width: 1050px;
+            height: 100%;
+            margin-top: 20px;
+
+            .searchField {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 10px;
+
+                .searchAlign {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    input {
+                        width: 230px;
+                        margin-right: 2px;
+                        font-family: "Open Sans", sans-serif;
+                    }
+
+                    .formButtons {
+                        button {
+                            font-family: "Open Sans", sans-serif;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+
+                .sortingsys {
+                    select {
+                        height: 40px;
+                        width: 200px;
+                    }
+                }
+            }
+
+            .EventCards {
+                height: 400px;
+                width: 100%;
+                // background-color: green;
+                margin: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+                overflow: scroll;
+                overflow-x: hidden;
+                padding-right: 20px;
+
+                &::-webkit-scrollbar {
+                    width: 0px;
+                    height: 8px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: var(--iconColor);
+                    width: 10px;
+                    border-radius: 10px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background-color: white;
+                }
+
+                .Card {
+                    max-width: 280px;
+                    border-radius: 7px;
+                    width: 300px;
+                    height: 355px; //225px for mobile
+                    // background-image: repeating-linear-gradient(36deg, rgba(1, 145, 255, 0.1), rgba(176, 171, 171, 0.1) 1px, transparent 0px, transparent 5px);
+
+                    img {
+                        object-fit: cover;
+                        height: 150px;
+                    }
+
+                    .cardContent {
+                        height: 150px;
+                        padding: 5px;
+                        // background-color: red;
+
+                        h3 {
+                            color: rgba(0, 0, 0, 0.8);
+                            margin: 0;
+                            padding: 0;
+                            padding-left: 5px;
+                            margin-bottom: 3%;
+                            text-transform: capitalize;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            font-family: 'Roboto', sans-serif; 
+                            font-weight: bolder;
+                        }
+                        .cardTimingDate {
+                            padding: 3px 5px 5px 3px;
+                            color: rgba(24, 24, 24, 0.6);
+                            border-top: 1px solid rgba(0, 0, 0, 0.2);
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                            margin: 0px;
+                            // background-color: green;
+                            p {
+                                border: none;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                margin: 0;
+                                align-items: center;
+                                font-family: "Poppins", sans-serif;
+                                padding-left: 0px;
+                                b {
+                                    padding-right: 5px;
+                                }
+                                span {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                        p{
+                            padding-left: 3px;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                            color: rgba(24, 24, 24, 0.6);
+                        }
+                    }
+                    .edit {
+                        padding: 5px;
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 4px;
+                        background-color: rgb(0, 131, 183);
+                        color: white;
+                        cursor: pointer;
+                    }
+
+                    .delete {
+                        padding: 5px;
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 4px;
+                        background-color: rgb(255, 49, 49);
+                        color: white;
+                        cursor: pointer;
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            .paginationBtns {
+                // background-color: rgb(43, 117, 255);
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 10px;
+
+                button {
+                    border: none;
+                    outline: none;
+                    background-color: rgb(43, 117, 255);
+                    color: white;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 5px;
+                }
+
+                span {
+                    font-family: "Roboto", sans-serif;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+// component two basically form
+.AddEventFormTitle {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+
+    span {
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+.AddEventForm {
+    padding: 1px 10px;
+
+    label {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Open Sans", sans-serif;
+    }
+}
+
+// MyupdatecenterModelstyle
+.MyUpdateCenterModel {
+    position: fixed;
+    top: 0%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(139, 139, 139);
+    z-index: 100;
+    overflow: scroll;
+    overflow-x: hidden;
+
+    .fullupdateform {
+        max-height: 95%;
+        height: 100%;
+        max-width: 95%;
+        width: 800px;
+        overflow: scroll;
+        overflow-x: hidden;
+        .updateForm {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-radius: 7px;
+            background-color: rgb(255, 255, 255);
+            z-index: 101;
+
+            .Title {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                height: 70px;
+                width: 100%;
+                padding: 0px 10px;
+                border-bottom: 1px solid rgba(8, 8, 8, 0.1);
+
+                h2 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    font-family: "Nunito", sans-serif;
+                    margin-top: 5px;
+
+                    span {
+                        font-weight: 400;
+                        font-size: 16px;
+                    }
+                }
+
+                .formClose {
+                    height: 35px;
+                    width: 35px;
+                    cursor: pointer;
+                }
+            }
+
+            .Form {
+                width: 100%;
+                border-bottom: 1px solid rgba(8, 8, 8, 0.1);
+                // background-color: #75b5fe;
+
+                .AddEventForm {
+                    padding: 1px 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    height: 100%;
+                    width: 100%;
+                    // background-color: red;
+
+                    .inputLayer {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 100%;
+                        // background-color: red;
+
+                        label {
+                            font-size: 18px;
+                            font-weight: bold;
+                            font-family: "Open Sans", sans-serif;
+                            margin-top: 15px;
+
+                            sup {
+                                color: rgb(224, 4, 4);
+                            }
+                        }
+
+                        input {
+                            height: 40px;
+                            padding-left: 6px;
+                            border-radius: 6px;
+                            border: none;
+                            outline: 1px solid rgba(8, 8, 8, 0.1);
+                            width: 100%;
+                            margin-top: 5px;
+
+                            &:focus {
+                                outline: 3px solid skyblue;
+                            }
+                        }
+                        textarea {
+                            height: 40px;
+                            padding-left: 6px;
+                            border-radius: 6px;
+                            border: none;
+                            outline: 1px solid rgba(8, 8, 8, 0.1);
+                            width: 100%;
+                            margin-top: 5px;
+
+                            &:focus {
+                                outline: 3px solid skyblue;
+                            }
+                        }
+                        select {
+                            height: 40px;
+                            padding-left: 6px;
+                            border-radius: 6px;
+                            border: none;
+                            outline: 1px solid rgba(8, 8, 8, 0.1);
+                            width: 100%;
+                            margin-top: 13px;
+
+                            &:focus {
+                                outline: 3px solid skyblue;
+                            }
+                        }
+                    }
+
+                    .TeacherFormAlign {
+                        margin-top: 15px;
+                    }
+                }
+            }
+
+            .formCloseBtn {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                width: 100%;
+                height: 70px;
+                padding-right: 10px;
+
+                button {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .EventDashboardWrapper {
+        .EventPageFull {
+            width: 100%;
+        }
+        .EventPageSmall {
+            width: 100%;
+        }
+
+        .EventPageContainer {
+            .EventPageMidPart {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .searchField {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+
+    // component two basically form
+    .AddEventFormTitle {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Nunito", sans-serif;
+
+        span {
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+
+    .AddEventForm {
+        .TeacherFormAlign {
+            .TeacherFormAlignItems {
+                .TeacherformAlignitem {
+                    label {
+                        font-size: 15px;
+                        margin-top: 5px;
+                        font-family: "Nunito", sans-serif;
+                    }
+
+                    input {
+                        width: 25px;
+                        height: 24px;
+                        border-radius: 50%;
+                        margin-left: 15px;
+                        cursor: pointer;
+                    }
+                    .activeGenderRadio {
+                        background-color: #75b5fe;
+                    }
+                    .activeParentRadio {
+                        background-color: #75b5fe;
+                    }
+                    .activeFeeRadio {
+                        background-color: #75b5fe;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .EventDashboardWrapper {
+        .EventPageContainer {
+            .EventPageMidPart {
+                .searchField {
+                    gap: 2px;
+
+                    .searchAlign {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 2px;
+
+                        input {
+                            margin-left: 5px;
+                        }
+                    }
+
+                    .sortingsys {
+                        select {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .EventDashboardWrapper {
+        .EventPageContainer {
+            .EventPageMidPart {
+                .searchField {
+                    .searchAlign {
+                        input {
+                            width: 220px;
+                        }
+                    }
+
+                    .sortingsys {
+                        select {
+                            width: 220px;
+                        }
+                    }
+                }
+
+                .EventCards {
+                    max-width: 250px;
+                    width: 300px;
+                    padding-right: 5px;
+                    .Card {
+                        .cardContent {
+                            .cardTimingDate {
+                                p {
+                                    justify-content: space-between;
+                                    padding-right: 20px;
+                                    b {
+                                        padding-right: 5px;
+                                        font-size: 16px;
+                                    }
+                                    span {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .MyUpdateCenterModel {
+        .updateForm {
+            .Title {
+                h2 {
+                    font-size: 22px;
+                    margin-top: 7px;
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .Form {
+                .AddEventForm {
+                    .inputLayer {
+                        label {
+                            font-size: 18px;
+                            font-weight: bold;
+                            font-family: "Open Sans", sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,450 @@
+:root {
+    --iconColor: #716fff;
+}
+
+.DashboardWrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    height: 89.9vh;
+    // width: 100%;
+    .AdminDashboardFull {
+        width: 100%;
+        background-color: #e8e8fc;
+        transition: all 0.3s ease-in-out;
+        overflow: scroll;
+        overflow-x: hidden;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+            background-color: var(--iconColor);
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--iconColor);
+            width: 10px;
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+    }
+    .AdminDashboardSmall {
+        width: calc(100% - 250px);
+        background-color: #e8e8fc;
+        padding: 20px;
+        border-radius: 20px 20px 0px 0px;
+        overflow: scroll;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--iconColor);
+            width: 10px;
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: white;
+        }
+    }
+
+    .DashboardContainer {
+        // background-color: red;
+        display: flex;
+        flex-direction: column;
+
+        .DashboardCardsTop {
+            height: 100%;
+            // background-color: green;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 5px;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            .Card {
+                width: 270px;
+                height: 190px;
+                background-color: rgb(85, 54, 187);
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                // clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0 100%, 0 0);
+
+                &:nth-child(2) {
+                    background-color: rgb(43, 117, 255);
+
+                    .cardTop {
+                        background-color: rgb(93, 150, 255);
+                    }
+                }
+                &:nth-child(3) {
+                    background-color: rgb(255, 166, 41);
+
+                    .cardTop {
+                        background-color: rgb(250, 194, 116);
+                    }
+                }
+                &:nth-child(4) {
+                    background-color: rgb(45, 156, 5);
+
+                    .cardTop {
+                        background-color: rgb(98, 191, 63);
+                    }
+                }
+                .cardTop {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: 10px;
+                    background-color: rgb(124, 95, 219);
+                    border-radius: 6px 6px 0px 0px;
+                    clip-path: polygon(20% 0%, 100% 0, 100% 19%, 100% 77%, 80% 100%, 20% 100%, 0 100%, 0 0);
+
+                    h1 {
+                        font-family: "Roboto", sans-serif;
+                        font-size: 3rem;
+                        color: white;
+                    }
+
+                    .StyleDashboardIcons {
+                        // background-color: #e8e8fc;
+                        height: 45px;
+                        width: 45px;
+                        color: white;
+                    }
+                }
+
+                .cardMid {
+                    padding: 6px 8px;
+                    margin: 0;
+                    height: 55px;
+                    color: white;
+                    // background-color: rgb(187, 90, 90);
+
+                    h3 {
+                        font-family: "Poppins", sans-serif;
+                        font-size: 1.5rem;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    p {
+                        font-size: 11px;
+                    }
+                }
+
+                .cardBottom {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 40px;
+
+                    button {
+                        border: none;
+                        outline: none;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 0px 0px 6px 6px;
+                        color: white;
+                        font-size: 20px;
+                        background-color: transparent;
+                        margin-top: -7px;
+
+                        .cardbottomBtnIcon {
+                            height: 30px;
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .DashboardMidPard {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            // gap: 20px;
+            margin-top: 30px;
+            // justify-content: space-between;
+
+            .TodaysEvents {
+                width: 60%;
+                // height: 300px;
+                // background-color: #010152;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                h1 {
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: rgba(0, 0, 0, 0.7);
+                }
+
+                .slide {
+                    border-radius: 15px 15px 15px 15px;
+                    height: 400px;
+
+                    img {
+                        border-radius: 15px 15px 15px 15px;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .UpcommingEvents {
+                width: 40%;
+                height: 100%;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                h1 {
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: rgba(0, 0, 0, 0.7);
+                }
+
+                .HolidaysContainer {
+                    width: 100%;
+                    height: 400px;
+                    overflow: scroll;
+                    overflow-x: hidden;
+
+                    &::-webkit-scrollbar {
+                        width: 0px;
+                        background-color: var(--iconColor);
+                    }
+
+                    .HolidaySide {
+                        width: 100%;
+                        height: 100px;
+                        background-color: rgb(255, 255, 255);
+                        border-bottom: 1px dashed rgba(143, 143, 143, 0.5);
+                        padding: 10px;
+                        position: relative;
+                        border-radius: 6px;
+                        margin-bottom: 2px;
+                        transition: all 0.3s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.01);
+                            transition: all 0.3s ease-in-out;
+                        }
+
+                        h3 {
+                            font-family: "Open Sans", sans-serif;
+                            font-size: 26px;
+                            font-weight: bold;
+                            color: rgba(0, 0, 0, 0.7);
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            // background-color: crimson;
+
+                            span {
+                                .Upcommingholiday {
+                                    height: 35px;
+                                    width: 35px;
+                                }
+                            }
+                        }
+
+                        p {
+                            b {
+                                font-family: "Open Sans", sans-serif;
+                                font-size: 18px;
+                                color: rgba(0, 0, 0, 0.8);
+                            }
+
+                            span {
+                                font-family: "Open Sans", sans-serif;
+                                font-size: 16px;
+                                color: rgba(0, 0, 0, 0.5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1000px) {
+    .DashboardWrapper {
+        .DashboardContainer {
+            .DashboardMidPard {
+                .TodaysEvents {
+                    h1 {
+                        font-size: 20px;
+                    }
+                    .slide {
+                        border-radius: 15px 15px 15px 15px;
+                        height: 350px;
+
+                        img {
+                            border-radius: 15px 15px 15px 15px;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                .UpcommingEvents {
+                    h1 {
+                        font-size: 20px;
+                    }
+                    .HolidaysContainer {
+                        height: 350px;
+                        .HolidaySide {
+                            height: 80px;
+                            h3 {
+                                font-size: 22px;
+
+                                span {
+                                    .Upcommingholiday {
+                                        height: 28px;
+                                        width: 28px;
+                                    }
+                                }
+                            }
+
+                            p {
+                                b {
+                                    font-size: 16px;
+                                }
+
+                                span {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 900px) {
+    .DashboardWrapper {
+        .AdminDashboardFull {
+            width: 100%;
+        }
+        .AdminDashboardSmall {
+            width: 100%;
+        }
+
+        .DashboardContainer {
+            .DashboardMidPard {
+                .TodaysEvents {
+                    width: 100%;
+
+                    .slide {
+                        border-radius: 15px 15px 15px 15px;
+                        height: 350px;
+
+                        img {
+                            border-radius: 15px 15px 15px 15px;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                .UpcommingEvents {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 425px) {
+    .DashboardWrapper {
+        .DashboardContainer{
+            .DashboardCardsTop{
+                .Card{
+                    .cardMid{
+                        h3{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+            
+
+        .DashboardContainer {
+            .DashboardMidPard {
+                .TodaysEvents {
+                    width: 100%;
+                    h1 {
+                        font-size: 18px;
+                    }
+                    .slide {
+                        border-radius: 15px 15px 15px 15px;
+                        height: 250px;
+
+                        img {
+                            border-radius: 15px 15px 15px 15px;
+                            height: 100%;
+                        }
+
+                        .slideText{
+                            h3{
+                                font-size: 16px;
+                                padding: 0px;
+                                margin: 1px;
+                            }
+                            p{
+                                font-size: 12px;
+                                padding: 0px;
+                                margin: 1px;
+                            }
+                        }
+                    }
+                }
+
+                .UpcommingEvents {
+                    width: 100%;
+                    h1 {
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                    .HolidaysContainer{
+                        .HolidaySide{
+                            h3 {
+                                font-size: 20px;
+
+                                span {
+                                    .Upcommingholiday {
+                                        height: 26px;
+                                        width: 26px;
+                                    }
+                                }
+                            }
+
+                            p {
+                                b {
+                                    font-size: 14px;
+                                }
+
+                                span {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
